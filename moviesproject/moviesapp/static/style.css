@@ -26,3 +26,33 @@ body {
 .card {
     border: 2px solid black;
 }
+.actions, .container {
+    padding: 10px;
+}
+
+.card-actions {
+    display: flex;
+    gap: 8px;
+    padding: 8px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 4px 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    color: black;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: #090820;
+    border-color: #090820;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #c0392b;
+    border-color: #c0392b;
+    color: white;
+}

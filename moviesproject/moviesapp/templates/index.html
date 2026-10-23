@@ -19,17 +19,11 @@
             <div>
                 <h5>{{movie.Title}} - {{movie.Year}}</h5>
             </div>
-            {% endfor %}
         </div>
+
+        {% endfor %}
+
     </div>
 
-    <div class = "container">
-        <h2> ADICIONAR NOVO FILME</h2>
-        <form method = "post">
-            {% csrf_token %}
-            {{ form.as_p}}
-            <button type ="submit"> Adicionar Filme</button>
-        </form>
-    </div>
 </body>
 </html>

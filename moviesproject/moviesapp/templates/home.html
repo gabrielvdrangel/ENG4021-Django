@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="actions">
+    <a class="btn btn-primary" href="{% url 'movie_create' %}">Novo filme</a>
+</div>
+
+<div class="catalog">
+    {% for movie in movies %}
+    <div class="card" style="width: 18rem;">
+        <img style="width: 100px;" src="{{ movie.image_url }}" alt="{{ movie.title }}" class="card-img-top">
+        <div>
+            <h5>{{ movie.title }}</h5>
+            <p>{{ movie.description }}</p>
+        </div>
+        <div class="card-actions">
+            <a class="btn" href="{% url 'movie_update' movie.pk %}">Atualizar</a>
+            <a class="btn btn-danger" href="{% url 'movie_delete' movie.pk %}">Deletar</a>
+        </div>
+    </div>
+    {% empty %}
+    <p>No movies registered yet.</p>
+    {% endfor %}
+</div>
+{% endblock %}

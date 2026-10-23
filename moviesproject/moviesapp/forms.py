@@ -6,5 +6,5 @@ class MovieForm(forms.ModelForm):
     class Meta:
 
         model = Movie
-        fields = ['title', 'director', 'release_year']
+        fields = ['title', 'description', 'image_url']
         

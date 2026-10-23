@@ -4,6 +4,6 @@ from django.db import models
 
 class Movie(models.Model):
     
-    title = models.CharField(max_length = 100)
-    director = models.CharField(max_length=100)
-    release_year = models.IntegerField()
+    title = models.CharField(max_length = 200)
+    description = models.TextField()
+    image_url = models.URLField(max_length = 500)
