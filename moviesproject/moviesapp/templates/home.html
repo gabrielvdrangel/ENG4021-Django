@@ -5,6 +5,11 @@
     <a class="btn btn-primary" href="{% url 'movie_create' %}">Novo filme</a>
 </div>
 
+ {% if request.user.is_authenticated%} 
+    <b>Bem-vindo, {{request.user.username}}</b> <br>
+    <a href = "/users/logout">Sair</a>
+{% endif %} 
+
 <div class="catalog">
     {% for movie in movies %}
     <div class="card" style="width: 18rem;">
@@ -21,5 +26,6 @@
     {% empty %}
     <p>No movies registered yet.</p>
     {% endfor %}
+
 </div>
 {% endblock %}
