@@ -78,7 +78,6 @@ def movie_delete(request, pk):
 
     return render(request, "movie_confirm_delete.html", {"movie": movie})
 
-@login_required
 def create_user (request):
     if request.method == 'POST':
 

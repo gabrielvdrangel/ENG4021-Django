@@ -28,5 +28,5 @@ urlpatterns = [
     path('users/', create_user, name='create_user'),
     path('users/login/', login_user, name='login'),
 #   path('users/', include('django.contrib.auth.urls')),
-    path ('users/logout', logout_user, name = 'logout')
+    path ('users/logout/', logout_user, name = 'logout')
 ]
